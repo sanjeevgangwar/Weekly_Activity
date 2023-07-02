@@ -41,6 +41,7 @@ int main()
     student s1("10", "Sanjeev Kumar", 1);
     student s3;
     s3 = s2;
+    // s3+s2;
     s3.into();
 
     // int a =10;
