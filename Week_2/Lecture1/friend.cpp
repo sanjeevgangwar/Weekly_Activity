@@ -26,6 +26,11 @@ public:
 
     // friend class bestfriend;
 };
+void hacker(student s)
+{
+    cout << s.passcode << " " << s.age << endl;
+}
+
 class bestfriend
 {
 public:
@@ -33,12 +38,15 @@ public:
     {
         cout << s.passcode << s.age << endl;
     }
+    friend void hacker(student s);
 };
 int main()
 {
     student s1;
     s1.setPass("0001", 10);
     bestfriend bff;
-    bff.sharingsecret(s1);
+    // bff.sharingsecret(s1);
+    hacker(s1);
+    // s1.passcode = "001";
     return 0;
 }
